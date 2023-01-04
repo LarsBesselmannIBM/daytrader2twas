@@ -16,6 +16,11 @@ TradeDataSourceAuthData_password_1='passw0rd'
 TradeDataSourceAuthData_user_1='db2inst1'
 # ============================================================
 
+print 'Wait to avoid WorkSpaceException: RepositoryException'
+import sys
+import time
+time.sleep(60)
+
 print 'Starting Creating JVM Properties'
 # Properties are migrated from server AppSrv1Node/TradeServer2.
 AdminTask.setGenericJVMArguments('[-nodeName ' + NodeName + ' -serverName server1 -genericJvmArguments "-XX:ShareClassesEnableBCI"]')
